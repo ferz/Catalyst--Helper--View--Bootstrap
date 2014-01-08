@@ -1,6 +1,6 @@
 package Catalyst::Helper::View::Bootstrap;
 
-our $VERSION = '0.0002';
+our $VERSION = '0.0003';
 $VERSION = eval $VERSION;
 
 use strict;
@@ -77,7 +77,7 @@ Catalyst::Helper::View::Bootstrap - Helper for Twitter Bootstrap and TT view whi
 This helper module creates a TT View module.  It goes further than
 Catalyst::Helper::View::TT in that it additionally creates a simple
 set of templates to get you started with your web site presentation
-using Twitter Bootstrap2 from a CDN (Content Delivery Network).
+using Twitter Bootstrap3 from a CDN (Content Delivery Network).
 
 It creates the templates in F<root/> directory underneath your
 main project directory.  In here two further subdirectories are
@@ -335,7 +335,7 @@ __welcome.tt2__
 You can use the power of <a href="http://www.template-toolkit.org/">Template Toolkit 2</a> and the look and features of Bootstrap CSS.</p>
 
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+        <p><a href="http://www.catalystframework.org/" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
       </div>
  </div>[%# end of jumbotron %]
 
@@ -344,21 +344,20 @@ You can use the power of <a href="http://www.template-toolkit.org/">Template Too
       <div class="row">
         <div class="col-md-4">
           <h2>Template Toolkit</h2>
-          <p>...</p>
-          <p><a class="btn btn-default" href="http://www.template-toolkit.com/" role="button">View details &raquo;</a></p>
+          <p>The Template Toolkit is a fast, flexible and highly extensible template processing system. It is Free (in both senses: free beer and free speech), Open Source software and runs on virtually every modern operating system known to man. It is mature, reliable and well documented, and is used to generate content for countless web sites ranging from the very small to the very large.</p>
+          <p><a class="btn btn-default" href="http://www.template-toolkit.org/" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Bootstrap 3</h2>
-          <p>Responsive and Adaptative...</p>
+          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
           <p><a class="btn btn-default" href="http://getbootstrap.com/" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
           <h2>jQuery or Dojo</h2>
-          <p>jQuery is common, but DojoToolkit is powerful. I would like to substitute jQuery for Dojo.</p>
+          <p>jQuery is common, but DojoToolkit is powerful and clean, stable and asynchronous. I would like to substitute jQuery with Dojo 2.0 as soon as it'll be released in 2014.</p>
           <p><a class="btn btn-default" href="http://dojotoolkit.org/" role="button">View details &raquo;</a></p>
         </div>
       </div>
-
     <hr>
 
     [% PROCESS footer %]
