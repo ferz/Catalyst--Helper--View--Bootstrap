@@ -28,7 +28,8 @@ SYNOPSIS
 DESCRIPTION
     This helper module creates a TT View module. It goes further than
     Catalyst::Helper::View::TT in that it additionally creates a simple set
-    of templates to get you started with your web site presentation.
+    of templates to get you started with your web site presentation using
+    Twitter Bootstrap3 from a CDN (Content Delivery Network).
 
     It creates the templates in root/ directory underneath your main project
     directory. In here two further subdirectories are created: root/src
