@@ -62,7 +62,7 @@ Catalyst::Helper::View::Bootstrap - Helper for Twitter Bootstrap and TT view whi
         $c->stash->{message}  ||= $c->req->param('message') || 'No message';
     }
 
-    sub default : Private {
+    sub index : Path : Args(0) {
         my ( $self, $c ) = @_;
         $c->stash->{template} = 'welcome.tt2';
     }
@@ -283,11 +283,7 @@ __site_layout__
 [% TAGS star -%]
 [% PROCESS site/header %]
 
-<div class="container">
 [% content %]
-
-<div id="footer">[% PROCESS site/footer %]</div>
-</div><!-- container -->
 __site_header__
 [% TAGS star -%]
 <!-- BEGIN site/header -->
@@ -349,7 +345,8 @@ You can use the power of <a href="http://www.template-toolkit.org/">Template Too
         </div>
         <div class="col-md-4">
           <h2>Bootstrap 3</h2>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.<br>
+             Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system. </p>
           <p><a class="btn btn-default" href="http://getbootstrap.com/" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
@@ -360,7 +357,7 @@ You can use the power of <a href="http://www.template-toolkit.org/">Template Too
       </div>
     <hr>
 
-    [% PROCESS footer %]
+    [% PROCESS site/footer %]
 </div>[%# end of jumbotron %]
 <!-- END of welcome -->
 __message.tt2__
