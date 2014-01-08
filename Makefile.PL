@@ -16,6 +16,6 @@ requires 'Catalyst::View::TT' => 0;
 test_requires 'Test::More';
 
 auto_install;
-# resources repository => 'git://git.shadowcat.co.uk/catagits/Catalyst-View-TT.git';
+# resources repository => 'https://github.com/ferz/Catalyst--Helper--View--Bootstrap';
 
 WriteAll;

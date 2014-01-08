@@ -1,6 +1,6 @@
 package Catalyst::Helper::View::Bootstrap;
 
-our $VERSION = '0.0003';
+our $VERSION = '0.0004';
 $VERSION = eval $VERSION;
 
 use strict;
