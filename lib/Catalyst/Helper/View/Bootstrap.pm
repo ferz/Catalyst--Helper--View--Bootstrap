@@ -1,16 +1,45 @@
 package Catalyst::Helper::View::Bootstrap;
 
-our $VERSION = '0.0004';
+our $VERSION = '0.0005';
 $VERSION = eval $VERSION;
 
 use strict;
 use File::Spec;
+use Path::Class qw/dir file/;
+use File::ShareDir qw/dist_dir/;
+
+sub get_sharedir_file {
+    my ($self, @filename) = @_;
+    my $dist_dir;
+    if (exists $ENV{CATALYST_DEVEL_SHAREDIR}) {
+        $dist_dir = $ENV{CATALYST_DEVEL_SHAREDIR};
+    }
+    elsif (-d "inc/.author" && -f "lib/Catalyst/Helper/View/Bootstrap.pm"
+            ) { # Can't use sharedir if we're in a checkout
+                # this feels horrible, better ideas?
+        $dist_dir = 'share';
+    }
+    else {
+        $dist_dir = dist_dir('Catalyst-Helper-View-Bootstrap');
+    }
+    my $file = file( $dist_dir, @filename);
+    Carp::confess("Cannot find $file") unless -r $file;
+    my $contents = $file->slurp(iomode =>  "<:raw");
+    return $contents;
+}
 
 sub mk_compclass {
     my ( $self, $helper, @args ) = @_;
     my $file = $helper->{file};
     $helper->render_file( 'compclass', $file );
     $self->mk_templates( $helper, @args );
+    $helper->{root} = dir( $helper->{base}, 'root' );
+    $helper->mk_dir( $helper->{root} );
+    $helper->{static} = dir( $helper->{root}, 'static' );
+    $helper->mk_dir( $helper->{static} );
+    $helper->{images} = dir( $helper->{static}, 'images' );
+    $helper->mk_dir( $helper->{images} );
+    $self->_mk_images($helper);
 }
 
 sub mk_templates {
@@ -41,8 +70,21 @@ sub mk_templates {
     foreach my $file (qw( welcome.tt2 message.tt2 error.tt2 ttsite.css )) {
         $helper->render_file( $file, File::Spec->catfile( $sdir, $file ) );
     }
-
 }
+
+sub _mk_images {
+    my $self   = shift;
+    my $helper = shift;
+    my $images = $helper->{images};
+    my @images =
+      qw/catalyst_logo/;
+    for my $name (@images) {
+        my $image = $self->get_sharedir_file("root", "static", "images", "$name.png.bin");
+	rename file( $images, "$name.png" ), file( $images, "$name.png" ).'.orig';
+        $helper->mk_file( file( $images, "$name.png" ), $image );
+    }
+}
+
 
 =head1 NAME
 

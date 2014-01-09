@@ -18,11 +18,13 @@ name: Catalyst-Helper-View-Bootstrap
 no_index:
   directory:
     - inc
+    - share
 requires:
   Catalyst: 5.7
   Catalyst::View::TT: 0
+  File::ShareDir: 0
   Template: 0
-  perl: 5.8.1
+  perl: 5.12.1
 resources:
   license: http://dev.perl.org/licenses/
 version: 0.0004
