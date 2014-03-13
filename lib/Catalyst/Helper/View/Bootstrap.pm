@@ -299,11 +299,11 @@ __site_html__
 <!DOCTYPE HTML>
 <html>
  <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
   <title>[% template.title or site.title %]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-
+  <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet">
+  
   <style type="text/css">
 body {
 padding-top: 60px;
@@ -317,8 +317,8 @@ padding: 9px 0;
  </head>
  <body>
 [% content %]
- <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
- <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
  </body>
 </html>
 __site_layout__
