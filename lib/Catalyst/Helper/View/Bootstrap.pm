@@ -364,7 +364,7 @@ __site_footer__
 <!-- END site/footer -->
 __welcome.tt2__
 [% TAGS star -%]
-[% META title = 'Catalyst/Boostrap TT View' %]
+[% META title = 'Catalyst/Bootstrap TT View' %]
 <div class="jumbotron">
       <div class="container"><img style="float: right;" src="/static/images/catalyst_logo.png">
         <h1>Welcome to Catalyst world!</h1>
