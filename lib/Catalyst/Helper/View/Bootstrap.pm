@@ -425,10 +425,29 @@ __error.tt2__
   Here's the error message, on the off-chance that it means something
   to you: <span class="error">[% error %]</span>
 </p>
+__signin.tt2__
+[% TAGS star -%]
+[% META title = 'Login' %]
+[% # From: http://getbootstrap.com/examples/signin/ %]
+    <div class="container">
+      <div class="row">
+
+        <form class="form-signin col-md-3 col-md-offset-4" role="form">
+          <h2 class="form-signin-heading">Please sign in</h2>
+          <input type="email" class="form-control" placeholder="Email address" required autofocus>
+          <input type="password" class="form-control" placeholder="Password" required>
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+
+      </div>
+    </div>
 __ttsite.css__
 [% TAGS star %]
 body {
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 .sidebar-nav {
