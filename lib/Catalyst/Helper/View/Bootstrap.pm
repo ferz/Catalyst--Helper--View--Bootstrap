@@ -300,6 +300,7 @@ __site_html__
 <html>
  <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>[% template.title or site.title %]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet">
