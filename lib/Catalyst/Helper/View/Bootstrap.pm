@@ -305,13 +305,6 @@ __site_html__
   <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet">
   
   <style type="text/css">
-body {
-padding-top: 60px;
-padding-bottom: 40px;
-}
-.sidebar-nav {
-padding: 9px 0;
-}
 [% PROCESS ttsite.css %]
   </style>
  </head>
@@ -434,7 +427,14 @@ __error.tt2__
 </p>
 __ttsite.css__
 [% TAGS star %]
+body {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.sidebar-nav {
+  padding: 9px 0;
+}
 
 .error {
-    color: #F11;
+  color: #F11;
 }
