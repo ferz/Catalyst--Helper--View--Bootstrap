@@ -359,7 +359,12 @@ __site_html__
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>[% template.title or site.title %]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+[% IF Catalyst.debug; %]
   <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet">
+[% ELSE; %]
+  <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+[% END; %]
   
   <style type="text/css">
 [% PROCESS ttsite.css %]
@@ -367,8 +372,14 @@ __site_html__
  </head>
  <body>
 [% content %]
+
+[% IF Catalyst.debug; %]
+ <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.js"></script>
+[% ELSE %]
  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+[% END %]
  </body>
 </html>
 __site_layout__
