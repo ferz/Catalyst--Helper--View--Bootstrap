@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use inc::Module::Install 0.91;
+use Module::Install::Share;
 
 
 if ( -e 'MANIFEST.SKIP' ) {
@@ -8,6 +9,7 @@ if ( -e 'MANIFEST.SKIP' ) {
 }
 
 perl_version '5.012001';
+version_from 'lib/Catalyst/Helper/View/Bootstrap.pm';
 
 name 'Catalyst-Helper-View-Bootstrap';
 all_from 'lib/Catalyst/Helper/View/Bootstrap.pm';
@@ -22,5 +24,18 @@ install_share 'share';
 
 auto_install;
 # resources repository => 'https://github.com/ferz/Catalyst--Helper--View--Bootstrap';
+
+makemaker_args(
+    META_MERGE        => {
+	"meta-spec" => { version => 2 },
+	resources => {
+	    repository => {
+		type => 'git',
+		url => 'git@github.com:ferz/Catalyst--Helper--View--Bootstrap.git',
+		web => 'https://github.com/ferz/Catalyst--Helper--View--Bootstrap',
+	    },
+	},
+    },
+    );
 
 WriteAll;
