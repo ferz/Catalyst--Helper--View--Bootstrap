@@ -1,6 +1,6 @@
 package Catalyst::Helper::View::Bootstrap;
 
-our $VERSION = '0.0006';
+our $VERSION = '0.0007';
 $VERSION = eval $VERSION;
 
 use strict;
@@ -24,7 +24,7 @@ sub get_sharedir_file {
     }
     my $file = file( $dist_dir, @filename);
     Carp::confess("Cannot find $file") unless -r $file;
-    my $contents = $file->(iomode =>  "<:raw");
+    my $contents = $file->slurp(iomode =>  "<:raw");
     return $contents;
 }
 
@@ -78,10 +78,10 @@ sub mk_templates {
     my $jsMinifier = 0;
     eval {
     	$SIG{__DIE__} = 'IGNORE';
-    	if(require 'JavaScript::Minifier::XS')) {
+    	if(require 'JavaScript::Minifier::XS') {
     	    $jsMinifier = 1;
     	}
-    	elsif(require 'JavaScript::Minifier')) {
+    	elsif(require 'JavaScript::Minifier') {
     	    $jsMinifier = 2;
     	}
 
