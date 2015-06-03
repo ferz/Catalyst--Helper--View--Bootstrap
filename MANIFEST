@@ -8,3 +8,4 @@ README
 README.md
 share/root/static/images/catalyst_logo.png.bin
 snapshot.png
+t/pod.t

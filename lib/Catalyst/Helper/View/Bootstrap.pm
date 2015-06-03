@@ -1,6 +1,6 @@
 package Catalyst::Helper::View::Bootstrap;
 
-our $VERSION = '0.0007';
+our $VERSION = '0.0008';
 $VERSION = eval $VERSION;
 
 use strict;
@@ -241,9 +241,11 @@ Generates the templates.
 L<Catalyst>, L<Catalyst::View::TT>, L<Catalyst::Helper>,
 L<Catalyst::Helper::View::TT>
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Ferruccio Zamuner <nonsolosoft@diff.org>
+Juan Paredes
+Colin Keith <colinmkeith@gmail.com>
 
 =head1 LICENSE
 

@@ -20,6 +20,7 @@ requires 'Template'        => 0;
 requires 'Catalyst::View::TT' => 0;
 
 test_requires 'Test::More';
+test_requires 'Test::Pod';
 install_share 'share';
 
 auto_install;
