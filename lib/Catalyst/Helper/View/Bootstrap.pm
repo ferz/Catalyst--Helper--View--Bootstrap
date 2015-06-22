@@ -1,9 +1,10 @@
 package Catalyst::Helper::View::Bootstrap;
 
-our $VERSION = '0.0008';
+our $VERSION = '0.0009';
 $VERSION = eval $VERSION;
 
 use strict;
+use warnings;
 use File::Spec;
 use Path::Class qw/dir file/;
 use File::ShareDir qw/dist_dir/;

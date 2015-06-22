@@ -18,6 +18,7 @@ requires 'File::ShareDir';
 requires 'Catalyst'        => '5.7';
 requires 'Template'        => 0;
 requires 'Catalyst::View::TT' => 0;
+requires 'Path::Class' => 0;
 
 test_requires 'Test::More';
 test_requires 'Test::Pod';
