@@ -25,8 +25,9 @@ requires:
   Catalyst: '5.7'
   Catalyst::View::TT: 0
   File::ShareDir: 0
+  Path::Class: 0
   Template: 0
   perl: 5.12.1
 resources:
   license: http://dev.perl.org/licenses/
-version: '0.0008'
+version: '0.0010'
