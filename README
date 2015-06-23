@@ -42,6 +42,9 @@ DESCRIPTION
 
     It sets character encoding to utf-8 and it delivers HTML5 pages.
 
+    Now you can set BOOTSTRAP_THEME in stash and it will load also
+    bootstrap-theme.css
+
   Default Rendering
     To render a template the following process is applied:
 
@@ -84,8 +87,9 @@ SEE ALSO
     Catalyst, Catalyst::View::TT, Catalyst::Helper,
     Catalyst::Helper::View::TT
 
-AUTHOR
-    Ferruccio Zamuner <nonsolosoft@diff.org>
+AUTHORS
+    Ferruccio Zamuner <nonsolosoft@diff.org> Juan Paredes Colin Keith
+    <colinmkeith@gmail.com>
 
 LICENSE
     This library is free software. You can redistribute it and/or modify it

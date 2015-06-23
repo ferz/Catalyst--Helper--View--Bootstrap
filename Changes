@@ -16,6 +16,6 @@ This file documents the revision history for Perl extension Bootstrap.
         - now both committers: Juan Paredes and Colin Keith are authors.
           Thank you Colin Keith
 
-0.0010  2015-06-22
-        - update to Twitter Bootstrap 3.3.5 from 3.1.x
+0.0011  2015-06-22
+        - updated to Twitter Bootstrap 3.3.5 from 3.1.x
         - added Module::Install so it will not fails on some systems.

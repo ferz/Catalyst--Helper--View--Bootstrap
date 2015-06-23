@@ -1,8 +1,8 @@
 use strict;
 use warnings;
-use inc::Module::Install 0.91;
+use inc::Module::Install 1.16;
 use Module::Install::Share;
-
+use Module::Install::AutoInstall;
 
 if ( -e 'MANIFEST.SKIP' ) {
     system( 'pod2text lib/Catalyst/Helper/View/Bootstrap.pm > README' );
@@ -22,10 +22,15 @@ requires 'Path::Class' => 0;
 
 test_requires 'Test::More';
 test_requires 'Test::Pod';
+
 install_share 'share';
 
 auto_install;
-# resources repository => 'https://github.com/ferz/Catalyst--Helper--View--Bootstrap';
+
+resources
+    repository => 'https://github.com/ferz/Catalyst--Helper--View--Bootstrap';
+
+abstract 'Helper for Twitter Bootstrap and TT view which builds a skeleton web site';
 
 makemaker_args(
     META_MERGE        => {
@@ -38,6 +43,11 @@ makemaker_args(
 	    },
 	},
     },
+    META_ADD => {
+	resources => {
+	    repository => 'https://github.com/ferz/Catalyst--Helper--View--Bootstrap',
+	},
+    }
     );
 
 WriteAll;
