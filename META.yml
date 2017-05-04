@@ -31,4 +31,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: https://github.com/ferz/Catalyst--Helper--View--Bootstrap
-version: '0.0011'
+version: '0.0013'

@@ -1,6 +1,4 @@
-MANIFEST			This list of files
 Changes
-inc/Modele/Install/AutoInstall.pm
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
@@ -15,14 +13,11 @@ inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Catalyst/Helper/View/Bootstrap.pm
 LICENSE
-Makefile
 Makefile.PL
+MANIFEST			This list of files
 META.yml
-MYMETA.json
-MYMETA.yml
 README
 README.md
 share/root/static/images/catalyst_logo.png.bin
 snapshot.png
 t/pod.t
-
