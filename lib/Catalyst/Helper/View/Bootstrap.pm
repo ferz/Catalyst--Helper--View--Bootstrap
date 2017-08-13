@@ -276,6 +276,7 @@ __PACKAGE__->config({
     WRAPPER      => 'site/wrapper',
     ERROR        => 'error.tt2',
     TIMER        => 0,
+    ENCODING     => 'utf8',
     render_die   => 1,
 });
 
